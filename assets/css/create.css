@@ -1,0 +1,258 @@
+/* Create Page Styles */
+.create-container-main{
+    margin-left: 25%;
+}
+.create-container {
+    max-width: 800px;
+    margin: 10%;
+    padding: 0 20px;
+}
+
+.upload-toggle {
+    margin-bottom: 20px;
+}
+
+.toggle-buttons {
+    display: inline-flex;
+    background: #1a1a1a;
+    padding: 4px;
+    border-radius: 8px;
+}
+
+.toggle-btn {
+    padding: 8px 24px;
+    border: none;
+    background: none;
+    color: #666;
+    border-radius: 6px;
+}
+
+.toggle-btn.active {
+    background: #333;
+    color: #fff;
+}
+
+.upload-card {
+    background: #1a1a1a;
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.upload-card h5 {
+    color: #fff;
+    margin-bottom: 24px;
+}
+
+.upload-area {
+    border: 2px dashed #333;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    min-height: 200px;
+    position: relative;
+}
+
+.preview-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.media-preview {
+    position: relative;
+    aspect-ratio: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #1a1a1a;
+}
+
+.media-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.file-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.file-input {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.preview-image {
+    max-width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    margin: 10px 0;
+}
+
+.upload-placeholder {
+    text-align: center;
+    color: #666;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.upload-placeholder i {
+    font-size: 48px;
+    color: #666;
+    margin-bottom: 16px;
+}
+
+.upload-placeholder p {
+    margin-bottom: 4px;
+    color: #fff;
+}
+
+.upload-placeholder span {
+    font-size: 14px;
+}
+
+.add-more-btn {
+    background: none;
+    border: none;
+    color: #666;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.form-group {
+    margin: 24px 0;
+}
+
+.form-group label {
+    display: block;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.form-control {
+    background-color: #1a1a1a !important;
+    border: 1px solid #333;
+    color: #fff !important;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.form-control::placeholder {
+    color: #666;
+}
+
+.form-control:focus {
+    background-color: #1a1a1a;
+    border-color: #a970ff;
+    box-shadow: none;
+}
+
+.action-buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.btn-draft {
+    background: none;
+    border: 1px solid #333;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 8px;
+}
+
+.right-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-schedule {
+    background: none;
+    border: 1px solid #333;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 8px;
+}
+
+.btn-share {
+    background: #a970ff;
+    border: none;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 8px;
+}
+
+.btn-share:hover {
+    background: #8a5cc9;
+}
+
+.hidden-upload {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.form-control {
+    background-color: #1a1a1a !important;
+    border: 1px solid #333;
+    color: #fff !important;
+}
+
+.form-control:focus {
+    background-color: #1a1a1a;
+    border-color: #a970ff;
+    box-shadow: none;
+}
+
+.btn-primary {
+    background-color: #a970ff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #8a5cc9;
+}
+
+.btn-outline-secondary {
+    color: #fff;
+    border-color: #333;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #1a1a1a;
+    border-color: #a970ff;
+    color: #a970ff;
+}
+
+/* Responsive styles for right sidebar */
+@media (max-width: 991px) {
+    .create-container-main{
+    margin-left: 0;
+   }
+   .create-container {
+    margin: auto;
+    margin-top: 20px;
+    padding: 0 20px;
+  }
+}

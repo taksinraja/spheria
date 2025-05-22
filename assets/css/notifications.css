@@ -1,0 +1,202 @@
+/* .notifications-panel {
+    position: fixed;
+    right: 20px;
+    top: 60px;
+    background: #1a1a1a;
+    border-radius: 8px;
+    width: 300px;
+    max-height: 500px;
+    overflow-y: auto;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    display: none;
+}
+
+.notifications-panel.active {
+    display: block;
+} */
+
+
+.notifications-popup {
+    position: fixed;
+    left: 20%;
+    top: 0;
+    width: 400px;
+    height: 100vh;
+    background: #000000;
+    border-right: 1px solid #1a1a1a;
+    z-index: 1000;
+    display: none;
+    overflow-y: auto;
+}
+
+.notifications-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid #2c2c2c;
+}
+
+.close-notifications {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.close-notifications:hover {
+    opacity: 1;
+}
+/* 
+.notifications-header {
+    padding: 16px;
+    border-bottom: 1px solid #1a1a1a;
+} */
+
+.notifications-header h4 {
+    margin: 0;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.notifications-tabs {
+    display: flex;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.notifications-tab {
+    flex: 1;
+    padding: 12px;
+    text-align: center;
+    color: #8e8e8e;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.notifications-tab.active {
+    color: #ffffff;
+    border-bottom: 2px solid #a970ff;
+}
+
+.notification-group {
+    padding: 12px 16px;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.notification-group-header {
+    color: #8e8e8e;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.notification-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    gap: 12px;
+}
+
+.notification-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.notification-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.notification-content {
+    flex: 1;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.notification-time {
+    color: #8e8e8e;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.notification-post-preview {
+    width: 44px;
+    height: 44px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.notification-post-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* .notification-action {
+    padding: 6px 16px;
+    background: #a970ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+} */
+
+/* .notification-action:hover {
+    background: #8a5cc9;
+} */
+
+.notification-action.following {
+    background: #333;
+}
+
+@media (max-width: 768px) {
+    .notifications-popup {
+        left: 0;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .notifications-header {
+        display: none;
+    }
+}
+
+
+/* Add these styles at the beginning of your notifications.css */
+/* .notifications-btn {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 12px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+} */
+
+/* .notifications-btn:hover {
+    background: rgba(169, 112, 255, 0.1);
+}
+
+.notifications-btn i {
+    font-size: 20px;
+    width: 24px;
+}
+
+.notifications-btn .badge {
+    margin-left: auto;
+} */

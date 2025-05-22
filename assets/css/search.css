@@ -1,0 +1,222 @@
+/* Search Container */
+.search-container {
+    width: 100%;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Main Content Responsive Styles */
+.main-content {
+    width: 50%;
+    margin-left: 20%;
+    padding: 0;
+    min-height: 100vh;
+}
+
+@media (max-width: 991px) {
+    .main-content {
+        width: calc(100% - 70px);
+        margin-left: 70px;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-content {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+/* Search Input */
+.search-input .form-control {
+    padding: 12px 15px;
+    border-radius: 10px;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+}
+
+.search-input .input-group-text {
+    border-radius: 10px 0 0 10px;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-right: none;
+}
+
+/* Recent Search Items */
+.recent-search {
+    margin-bottom: 30px;
+}
+
+.recent-search-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #1e1e1e;
+    padding: 8px 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.recent-search-item span {
+    color: #fff;
+    font-size: 14px;
+}
+
+.recent-search-item .fa-times {
+    color: #666;
+    cursor: pointer;
+}
+
+.recent-search-item .fa-times:hover {
+    color: #ff5555;
+}
+
+/* Creator Cards */
+.creator-card {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 10px;
+    height: 100%;
+    /* width: 80%; */
+    border: 1px solid #333;
+    /* Removed hover transform and shadow effects */
+}
+
+.reach-percentage {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background-color: #2a2a2a;
+    color: #a970ff;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Search Results */
+.search-results {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+}
+
+.result-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+.result-item:hover {
+    background-color: #2a2a2a;
+}
+
+.result-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.result-item .user-info {
+    flex-grow: 1;
+}
+
+.result-item .username {
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 2px;
+}
+
+.result-item .full-name {
+    font-size: 14px;
+    color: #999;
+}
+
+.result-item .follow-btn {
+    background-color: #a970ff;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.bg-dark-secondary {
+    background-color: #1e1e1e;
+}
+
+/* Trending section */
+.trending-creators {
+    margin-top: 30px;
+}
+
+.trending-creators h6 {
+    margin-bottom: 20px;
+    color: #d1d1d1; /* Lighter color for headings */
+}
+
+.creator-info {
+    display: flex;
+    align-items: center;
+}
+
+.creator-stats {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #b8b8b8; /* Lighter color for stats */
+}
+
+/* Additional text color fixes */
+.text-muted {
+    color: #b8b8b8 !important; /* Override Bootstrap's text-muted to be more visible */
+}
+
+small.text-muted {
+    color: #b8b8b8 !important;
+}
+
+h6.text-muted {
+    color: #d1d1d1 !important;
+}
+
+/* Make sure all secondary text is visible */
+.creator-card small, 
+.creator-card .text-muted,
+.search-results .text-muted,
+.recent-search .text-muted {
+    color: #b8b8b8 !important;
+}
+.tranding-card{
+    width: 24%;
+    margin-right: 10px;
+}
+@media screen and (max-width: 768px) {
+    .tranding-card{
+        width: 100%;
+        margin-right: 10px;
+    }
+}
+.view-btn{
+    background-color: #a970ff;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+.view-btn:hover{
+    background-color: #a970ff;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+}

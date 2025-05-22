@@ -1,0 +1,238 @@
+.story-upload-container {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 800px;
+    margin: 10%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.upload-story {
+    margin-left: 25%;
+    width: 100%;
+    max-width: 800px;
+    padding: 0 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .upload-story {
+        margin: 0 auto;
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 992px) {
+    .upload-story {
+        margin: 0 auto;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .upload-story {
+        margin: auto;
+        width: 100%;
+        padding: 0 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+}
+.story-upload-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.story-upload-header h4 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.story-upload-header p {
+    color: #888;
+    font-size: 16px;
+}
+
+.story-upload-area {
+    background: #2a2a2a;
+    border: 2px dashed #444;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.story-upload-area:hover {
+    border-color: #a970ff;
+    background: #2d2d2d;
+}
+
+.upload-placeholder {
+    color: #888;
+}
+
+.upload-placeholder i {
+    font-size: 48px;
+    color: #a970ff;
+    margin-bottom: 15px;
+}
+
+.upload-placeholder p {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.upload-placeholder span {
+    font-size: 14px;
+    color: #666;
+}
+
+.file-input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.preview-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.preview-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 1;
+}
+
+.preview-item img, 
+.preview-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.preview-item .remove-preview {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.preview-item .remove-preview:hover {
+    background: rgba(255, 0, 0, 0.7);
+}
+
+.story-form-group {
+    margin-bottom: 25px;
+}
+
+.story-form-group label {
+    color: #fff;
+    margin-bottom: 10px;
+    display: block;
+    font-weight: 500;
+}
+
+.story-form-group textarea {
+    background: #2a2a2a;
+    border: 1px solid #333;
+    color: #fff;
+    border-radius: 8px;
+    resize: none;
+}
+
+.story-form-group textarea:focus {
+    background: #2a2a2a;
+    border-color: #a970ff;
+    box-shadow: 0 0 0 2px rgba(169, 112, 255, 0.2);
+    color: #fff;
+}
+
+.story-action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.story-action-buttons .btn {
+    padding: 12px 30px;
+    font-weight: 500;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.story-action-buttons .btn-primary {
+    background: #a970ff;
+    border: none;
+}
+
+.story-action-buttons .btn-primary:hover {
+    background: #8a5ad9;
+    transform: translateY(-1px);
+}
+
+/* Drag & Drop States */
+.story-upload-area.dragover {
+    border-color: #a970ff;
+    background: rgba(169, 112, 255, 0.1);
+}
+
+/* Alert Styling */
+.alert {
+    background: #2a2a2a;
+    border: 1px solid #333;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.alert-danger {
+    background: rgba(220, 53, 69, 0.1);
+    border-color: #dc3545;
+    color: #dc3545;
+}
+
+.btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .story-upload-container {
+        margin: 15px;
+        padding: 20px;
+    }
+
+    .story-upload-area {
+        padding: 20px;
+    }
+
+    .preview-container {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 10px;
+    }
+}
