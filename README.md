@@ -1,5 +1,11 @@
 # Spheria - Social Media Platform
 
+## 🚀 UI Showcase
+
+![Spheria Hero Section 1](hero-section-stutas.png)
+![Spheria Hero Section 2](hero-section.png)
+![Spheria App Screens](upscalemedia-transformed.png)
+
 Spheria is a modern social media platform built with PHP, offering features similar to popular social networks with enhanced privacy and security features.
 
 ## 🌟 Features
