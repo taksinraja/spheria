@@ -69,7 +69,20 @@ Spheria is a modern social media platform built with PHP, offering features simi
 ## 🔧 Configuration
 
 1. Update `includes/config.php` with your database credentials
-2. Configure email settings for user verification
+2. Configure email settings for user verification:
+   - Open `includes/config.php`
+   - Update SMTP settings with your email credentials:
+     ```php
+     define('SMTP_USERNAME', 'your-email@gmail.com');
+     define('SMTP_PASSWORD', 'your-app-password');
+     ```
+   - For Gmail users:
+     1. Enable 2-Step Verification in your Google Account
+     2. Generate an App Password:
+        - Go to Google Account Settings
+        - Security > 2-Step Verification > App Passwords
+        - Select "Mail" and your device
+        - Use the generated 16-character password as SMTP_PASSWORD
 3. Set up encryption keys in `includes/encryption/MessageEncryption.php`
 
 ## 📁 Project Structure
