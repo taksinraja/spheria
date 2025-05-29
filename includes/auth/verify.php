@@ -20,9 +20,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if($otp_row['otp'] === (int)$otp) {
         // Check if OTP has expired (5 minutes validity)
-        $created_at = strtotime($otp_row['created_at']);
-        $current_time = time();
-        $time_diff = $current_time - $created_at;
+        $created_at = new DateTime($otp_row['created_at']);
+        $current_time = new DateTime();
+        $time_diff = $current_time->getTimestamp() - $created_at->getTimestamp();
         
         if($time_diff > 300) { // 300 seconds = 5 minutes
             $_SESSION['error'] = "OTP has expired. Please request a new one.";

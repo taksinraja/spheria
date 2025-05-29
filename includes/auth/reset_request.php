@@ -71,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <div class='content'>
                         <p>Hello $username,</p>
                         <p>We received a request to reset your password. Click the button below to create a new password:</p>
-                        <p style='text-align: center;'><a class='button' href='$reset_link'>Reset Password</a></p>
+                        <p style='text-align: center; color: white;'><a class='button' href='$reset_link'>Reset Password</a></p>
                         <p>If you didn't request this, you can safely ignore this email.</p>
                         <p>This link will expire in 1 hour for security reasons.</p>
                         <p>If the button doesn't work, copy and paste this URL into your browser:</p>

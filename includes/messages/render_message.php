@@ -1,13 +1,48 @@
 <?php
+require_once __DIR__ . '/../encryption/MessageEncryption.php';
+
 /**
  * Renders a message based on its content type
  * Supports text messages and shared posts
  * 
  * @param string $content The message content
+ * @param string $encrypted_content The encrypted message content (optional)
+ * @param string $iv The initialization vector for decryption (optional)
+ * @param string $tag The authentication tag for decryption (optional)
  * @return string The rendered HTML for the message
  */
-function render_message($content) {
+function render_message($content, $encrypted_content = null, $iv = null, $tag = null) {
     global $db;
+    
+    // If message is encrypted, decrypt it first
+    if ($encrypted_content && $iv && $tag) {
+        try {
+            // Get conversation key
+            $get_key = $db->prepare("
+                SELECT ck.encryption_key 
+                FROM conversation_keys ck
+                JOIN messages m ON m.conversation_id = ck.conversation_id
+                WHERE m.encrypted_content = ?
+            ");
+            $get_key->bind_param("s", $encrypted_content);
+            $get_key->execute();
+            $key_result = $get_key->get_result();
+            
+            if ($key_result->num_rows > 0) {
+                $conversation_key = $key_result->fetch_assoc()['encryption_key'];
+                
+                // Decrypt the message
+                $encryption = new MessageEncryption();
+                $decrypted_content = $encryption->decrypt($encrypted_content, $conversation_key, $iv, $tag);
+                
+                // Use decrypted content
+                $content = $decrypted_content;
+            }
+        } catch (Exception $e) {
+            // If decryption fails, show original content
+            return '<p>' . nl2br(htmlspecialchars($content)) . '</p>';
+        }
+    }
     
     // Check if content is JSON (for special message types)
     $decoded = json_decode($content, true);

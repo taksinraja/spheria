@@ -8,7 +8,7 @@ define('DB_NAME', 'spheria1');
 define('SMTP_HOST', 'smtp.gmail.com');
 define('SMTP_PORT', 587);
 define('SMTP_USERNAME', 'taskinraja01@gmail.com');
-define('SMTP_PASSWORD', 'tber mbis kene bgyd');
+define('SMTP_PASSWORD', 'tbermbiskenebgyd');
 
 // Error reporting for development
 ini_set('display_errors', 1);

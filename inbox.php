@@ -250,8 +250,37 @@ while ($user = $recent_users_result->fetch_assoc()) {
                                                          alt="<?= htmlspecialchars($message['username']) ?>">
                                                 </div>
                                             <?php endif; ?>
-                                            <div class="message-bubble">
-                                                <?= render_message($message['content']) ?>
+                                            <div class="message-bubble" style="color: white;">
+                                                <?php
+                                                // Check if message is encrypted
+                                                if (!empty($message['encrypted_content']) && !empty($message['iv']) && !empty($message['tag'])) {
+                                                    // Decrypt and show the real message
+                                                    require_once 'includes/encryption/MessageEncryption.php';
+                                                    $encryption = new MessageEncryption();
+                                                    
+                                                    // Get conversation key
+                                                    $get_key = $db->prepare("SELECT encryption_key FROM conversation_keys WHERE conversation_id = ?");
+                                                    $get_key->bind_param("i", $message['conversation_id']);
+                                                    $get_key->execute();
+                                                    $key_result = $get_key->get_result();
+                                                    
+                                                    if ($key_result->num_rows > 0) {
+                                                        $conversation_key = $key_result->fetch_assoc()['encryption_key'];
+                                                        $decrypted_message = $encryption->decrypt(
+                                                            $message['encrypted_content'],
+                                                            $conversation_key,
+                                                            $message['iv'],
+                                                            $message['tag']
+                                                        );
+                                                        echo htmlspecialchars($decrypted_message);
+                                                    } else {
+                                                        echo htmlspecialchars($message['content']);
+                                                    }
+                                                } else {
+                                                    // For unencrypted messages
+                                                    echo htmlspecialchars($message['content']);
+                                                }
+                                                ?>
                                                 <div class="message-time">
                                                     <?= date('M j, g:i a', strtotime($message['created_at'])) ?>
                                                 </div>
