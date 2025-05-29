@@ -7,8 +7,8 @@ define('DB_NAME', 'spheria1');
 // SMTP Configuration
 define('SMTP_HOST', 'smtp.gmail.com');
 define('SMTP_PORT', 587);
-define('SMTP_USERNAME', 'taskinraja01@gmail.com');
-define('SMTP_PASSWORD', 'tbermbiskenebgyd');
+define('SMTP_USERNAME', 'your-email'); //add your email here
+define('SMTP_PASSWORD', 'your app password'); // add your email app password here 
 
 // Error reporting for development
 ini_set('display_errors', 1);
